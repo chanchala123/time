@@ -1,7 +1,4 @@
 import time
-named_tuple = time.localtime()
-time_string = time.strftime("%H:%M:%S", named_tuple)
-print(time_string)
 def convert24(str1): 
     if str1[-2:] == "AM" and str1[:2] == "12": 
         return "00" + str1[2:-2]  
@@ -12,7 +9,6 @@ def convert24(str1):
           
     else: 
         return str(int(str1[:2]) + 12) + str1[2:8]     
-print(convert24("01:00:00 PM"))
 print(convert24("03:45:43 PM"))
 print(convert24("12:00:00 PM"))
 print(convert24("12:06:30 AM"))
